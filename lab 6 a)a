@@ -1,0 +1,20 @@
+ORG 100h          
+MOV AH, 09h       
+MOV DX, OFFSET msg_enter_input 
+INT 21h          
+
+MOV AH, 01h       
+INT 21h          
+MOV BL, AL        
+
+MOV AH, 09h     
+MOV DX, OFFSET msg_entered_input 
+INT 21h          
+MOV DL, BL        
+MOV AH, 02h       
+INT 21h           
+MOV AH, 4Ch       
+INT 21h          
+msg_enter_input DB 'Enter the input: $'         
+msg_entered_input DB 0Dh, 0Ah, 'The entered input is: $' 
+END        
