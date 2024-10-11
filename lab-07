@@ -23,9 +23,7 @@ INT 21h
 EndProgram:
 MOV AH, 4Ch           
 INT 21h               
-
-msg_input  DB 'Enter a single digit: $'  ; Input prompt message
-msg_output DB 0Dh, 0Ah, 'The entered digit is: $'  ; Output message with newline
-msg_error  DB 0Dh, 0Ah, 'Error: Invalid input! $'  ; Error message with newline
-
-END                   ; End of program
+msg_input  DB 'Enter a single digit: $'  
+msg_output DB 0Dh, 0Ah, 'The entered digit is: $'  
+msg_error  DB 0Dh, 0Ah, 'Error: Invalid input! $'  
+END          
